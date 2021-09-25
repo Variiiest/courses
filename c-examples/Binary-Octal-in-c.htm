@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OCOLLEGE/COURSES AND REVIEWS</title>
+  <!-- Favicon -->
+  <link href="../assets/img/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- ocollege CSS -->
+  <link type="text/css" href="../assets/css/ocollege.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="../index.html">
+        <img src="../assets/img/untitled.png" class="navbar-brand-img" alt="...">
+      </a>
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="../index.html">
+                <img src="../assets/img/untitled.png">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                  <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Navigation -->
+          <h4>COURSES</h4>
+            <hr class="my-1">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../c-programming-overview.html">
+                
+                <img src="../assets/img/icons8-computer-50.png">
+              C
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="../c-examples/examples-c.htm">
+                
+                <img src="../assets/img/c.png">
+             C EXAMPLES
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="../algorithms-overview.html">
+                <img src="../assets/img/icons8-bar-chart-50.png">
+            ALGORITHMS
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="../data-structure-overview.html">
+                
+                <img src="../assets/img/icons8-binary-file-50.png">
+                DATA STRUCTURE
+             
+            </a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="../python-overview.html">
+                
+                <img src="../assets/img/icons8-combo-chart-50.png">
+                PYTHON
+             
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../python-examples/python-examples.htm">
+                
+                <img src="../assets/img/icons8-combo-chart-50.png">
+                PYTHON EXAMPLES
+             
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="../assignment-blog.htm">
+                
+                <img src="../assets/img/blog.png">
+                       READ OUR BLOG
+            </a>
+          </li>
+             <li class="nav-item">
+             <a class="nav-link" href="../c-programming/advertise.htm">
+                
+                <img src="../assets/img/write.png">
+                 ADVERTISE
+             
+            </a>
+          </li>
+            <li class="nav-item">
+             <a class="nav-link" href="../send.htm">
+                
+                <img src="../assets/img/about.png">
+              SEND A PROBLEM
+             
+            </a>
+          </li>
+             <li class="nav-item">
+             <a class="nav-link" href="../about-us.htm">
+                
+                <img src="../assets/img/about-us.png">
+             ABOUT-US
+             
+            </a>
+          </li>
+            <li class="nav-item">
+             <a class="nav-link" href="../kopy-kitab.htm">
+                
+                <img src="../assets/img/book.png">
+                KOPY KITAB
+             
+            </a>
+          </li>
+        </ul>
+          
+      </div>
+    </div>
+  </nav><div class="main-content">
+    <!-- Header -->
+    <div class="header  ">
+        <img src="../assets/img/header.jpg" style="max-width: 100%;width: 1800px;height: 200px">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+         
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid ">
+     <div class="row">
+        <div class="col mt-3">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Binary  to Octal</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+ <div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include &lt;stdio.h&gt;</span>
+<span style="color: #0000ff">#include &lt;math.h&gt;</span>
+<span style="color: #2b91af">int</span> bintooct(<span style="color: #2b91af">long</span> <span style="color: #2b91af">long</span> bin);
+<span style="color: #2b91af">int</span> main()
+{
+    <span style="color: #2b91af">long</span> <span style="color: #2b91af">long</span> bin;
+
+    printf(<span style="color: #a31515">&quot;Enter a binary number: &quot;</span>);
+    scanf(<span style="color: #a31515">&quot;%lld&quot;</span>, &amp;bin);
+
+    printf(<span style="color: #a31515">&quot;%lld in binary = %d in octal&quot;</span>, bin, bintooct(bin));
+
+    <span style="color: #0000ff">return</span> 0;
+}
+
+<span style="color: #2b91af">int</span> bintooct(<span style="color: #2b91af">long</span> <span style="color: #2b91af">long</span> bin)
+{
+    <span style="color: #2b91af">int</span> oct = 0, dec = 0, i = 0;
+
+    <span style="color: #0000ff">while</span>(bin != 0)
+    {
+        dec += (bin%10) * pow(2,i);
+        ++i;
+        bin/=10;
+    }
+
+    i = 1;
+
+    <span style="color: #0000ff">while</span> (dec != 0)
+    {
+        oct += (dec % 8) * i;
+        dec /= 8;
+        i *= 10;
+    }
+
+    <span style="color: #0000ff">return</span> oct;
+}
+</pre></div>
+
+          </div>
+           </div>
+          </div>
+        </div>   
+      
+   <div class="row mt-3">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Octal to Binary</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col-md">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+   <div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include &lt;stdio.h&gt;</span>
+<span style="color: #0000ff">#include &lt;math.h&gt;</span>
+<span style="color: #2b91af">long</span> <span style="color: #2b91af">long</span> octtobin(<span style="color: #2b91af">int</span> oct);
+<span style="color: #2b91af">int</span> main()
+{
+    <span style="color: #2b91af">int</span> oct;
+    printf(<span style="color: #a31515">&quot;Enter an octal number: &quot;</span>);
+    scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;oct);
+    printf(<span style="color: #a31515">&quot;%d in octal = %lld in binary&quot;</span>, oct, octtobin(oct));
+    <span style="color: #0000ff">return</span> 0;
+}
+
+<span style="color: #2b91af">long</span> <span style="color: #2b91af">long</span> octtobin(<span style="color: #2b91af">int</span> oct)
+{
+    <span style="color: #2b91af">int</span> dec = 0, i = 0;
+    <span style="color: #2b91af">long</span> <span style="color: #2b91af">long</span> bin = 0;
+    <span style="color: #0000ff">while</span>(oct != 0)
+    {
+        dec += (oct%10) * pow(8,i);
+        ++i;
+        oct/=10;
+    }
+    i = 1;
+    <span style="color: #0000ff">while</span> (dec != 0)
+    {
+        bin += (dec % 2) * i;
+        dec /= 2;
+        i *= 10;
+    }
+    <span style="color: #0000ff">return</span> bin;
+}
+</pre>
+                </div>
+     </div>
+          </div>
+           </div>
+          </div>
+        </div>
+
+    </div>
+  
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+ 
+  <script src="../assets/js/ocollege.js?v=1.0.0"></script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Algorithms</title>
+  <!-- Favicon -->
+  <link href="../assets/img/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- ocollege CSS -->
+  <link type="text/css" href="../assets/css/ocollege.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="../index.html">
+        <img src="../assets/img/untitled.png" class="navbar-brand-img" alt="...">
+      </a>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+             
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Form -->
+        
+         <!-- Navigation -->
+          <h4>SEARCHING</h4>
+            <hr class="my-1">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="fa fa-code"></i>Linear search
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./examples/register.html">
+                <i class="fa fa-code"></i>Binary Search</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="fa fa-code"></i>Interpolation Search
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="fa fa-code"></i>Jump Search
+            </a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div class="main-content">
+    <!-- Top navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="basic.html">Binary Search</a>
+        
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="header bg-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+         
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--10">  
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Binary Search</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+      <h3>Binary search is a search algorithm that finds the position of a given value within a sorted array.</h3>
+       <h3>Algo</h3> 
+<pre>FUNC_BIN(A, l,b,VAL)
+ 1: SET BEG=l
+      END=b, POS=0 
+ 2: Repeat 3 and 4 while BEG &lt;= END
+ 3:      SET MID=(BEG+END)/2 
+ 4:      IF A[MID]=VAL 
+             SET POS=MID+1 
+             PRINT POS 
+             Go to  6 
+         ELSE IF A[MID]&gt;VAL 
+              SET END=MID-1 
+         ELSE SET BEG=MID+1
+             [END OF IF] 
+    [END OF LOOP] 
+ 5: IF POS=0
+       PRINT “VALUE DOES NOT EXIST” 
+   [END OF IF] 
+ 6: EXIT
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Implemation in C</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+ <pre>#include &lt;stdio.h&gt; 
+int binarySearch(int arr[], int l, int b, int x) 
+{ 
+	if (b &gt;= l) { 
+		int mid = l + (b - l) / 2; 
+		if (arr[mid] == x) 
+			return mid+1;  
+		if (arr[mid] &gt; x) 
+			return binarySearch(arr, l, mid - 1, x); 
+		return binarySearch(arr, mid + 1, b, x); 
+	} 
+	return 0; 
+} 
+
+int main(void) 
+{ 
+    int arr[10] ,n,i; 
+    printf("Enter the size of array");
+    scanf("%d",&amp;n);
+    printf("\n Enter the elements of Array");
+    for(i=0;i&lt;n;i++)
+    {
+    	scanf("%d",&amp;arr[i]);
+	}
+	int x;
+	printf("Enter number to search");
+	scanf("%d",&amp;x);
+	int result = binarySearch(arr, 0, n - 1, x); 
+     if(result == 0) 
+	 {
+	   printf("Number is not present in array");
+     }
+	printf("Number is present at position %d", result); 
+	return 0; 
+} 
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      <footer class="footer">
+      </footer>
+    </div>
+  </div>
+  <!-- ocollege Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ocollege JS -->
+  <script src="../assets/js/ocollege.js?v=1.0.0"></script>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C program to add, subtract, multiply and divide Complex Numbers, complex arithmetic</title>
+  <!-- Favicon -->
+  <link href="../assets/img/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- ocollege CSS -->
+  <link type="text/css" href="../assets/css/ocollege.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="../index.html">
+        <img src="../assets/img/untitled.png" class="navbar-brand-img" alt="...">
+      </a>
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="../index.html">
+                <img src="../assets/img/untitled.png">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                  <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Navigation -->
+          <h4>COURSES</h4>
+            <hr class="my-1">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../c-programming-overview.html">
+                
+                <img src="../assets/img/icons8-computer-50.png">
+              C
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="../c-examples/examples-c.htm">
+                
+                <img src="../assets/img/c.png">
+             C EXAMPLES
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="../algorithms-overview.html">
+                <img src="../assets/img/icons8-bar-chart-50.png">
+            ALGORITHMS
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="../data-structure-overview.html">
+                
+                <img src="../assets/img/icons8-binary-file-50.png">
+                DATA STRUCTURE
+             
+            </a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="../python-overview.html">
+                
+                <img src="../assets/img/icons8-combo-chart-50.png">
+                PYTHON
+             
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../python-examples/python-examples.htm">
+                
+                <img src="../assets/img/icons8-combo-chart-50.png">
+                PYTHON EXAMPLES
+             
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="../assignment-blog.htm">
+                
+                <img src="../assets/img/blog.png">
+                       READ OUR BLOG
+            </a>
+          </li>
+             <li class="nav-item">
+             <a class="nav-link" href="../c-programming/advertise.htm">
+                
+                <img src="../assets/img/write.png">
+                 ADVERTISE
+             
+            </a>
+          </li>
+            <li class="nav-item">
+             <a class="nav-link" href="../send.htm">
+                
+                <img src="../assets/img/about.png">
+              SEND A PROBLEM
+             
+            </a>
+          </li>
+             <li class="nav-item">
+             <a class="nav-link" href="../about-us.htm">
+                
+                <img src="../assets/img/about-us.png">
+             ABOUT-US
+             
+            </a>
+          </li>
+            <li class="nav-item">
+             <a class="nav-link" href="../kopy-kitab.htm">
+                
+                <img src="../assets/img/book.png">
+                KOPY KITAB
+             
+            </a>
+          </li>
+        </ul>
+          
+      </div>
+    </div>
+  </nav><div class="main-content">
+    <!-- Header -->
+    <div class="header  ">
+        <img src="../assets/img/header.jpg" style="max-width: 100%;width: 1800px;height: 200px">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+         
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid ">
+     <div class="row">
+        <div class="col mt-3">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">C program to add, subtract, multiply and divide Complex Numbers, complex arithmetic</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+  <div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include &lt;stdio.h&gt;</span>
+<span style="color: #0000ff">#include &lt;stdlib.h&gt;</span>
+ 
+<span style="color: #0000ff">struct</span> complex
+{
+  <span style="color: #2b91af">int</span> real, img;
+};
+ 
+<span style="color: #2b91af">int</span> main()
+{
+  <span style="color: #2b91af">int</span> choice, x, y, z;
+  <span style="color: #0000ff">struct</span> complex a, b, c;
+ 
+  <span style="color: #0000ff">while</span>(1)
+  {
+    printf(<span style="color: #a31515">&quot;Press 1 to add two complex numbers.\n&quot;</span>);
+    printf(<span style="color: #a31515">&quot;Press 2 to subtract two complex numbers.\n&quot;</span>);
+    printf(<span style="color: #a31515">&quot;Press 3 to multiply two complex numbers.\n&quot;</span>);
+    printf(<span style="color: #a31515">&quot;Press 4 to divide two complex numbers.\n&quot;</span>);
+    printf(<span style="color: #a31515">&quot;Press 5 to exit.\n&quot;</span>);
+    printf(<span style="color: #a31515">&quot;Enter your choice\n&quot;</span>);
+    scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;choice);
+ 
+    <span style="color: #0000ff">if</span> (choice == 5)
+      exit(0);
+ 
+    <span style="color: #0000ff">if</span> (choice &gt;= 1 &amp;&amp; choice &lt;= 4)
+    {
+      printf(<span style="color: #a31515">&quot;Enter a and b where a + ib is the first complex number.&quot;</span>);
+      printf(<span style="color: #a31515">&quot;\na = &quot;</span>);
+      scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;a.real);
+      printf(<span style="color: #a31515">&quot;b = &quot;</span>);
+      scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;a.img);
+      printf(<span style="color: #a31515">&quot;Enter c and d where c + id is the second complex number.&quot;</span>);
+      printf(<span style="color: #a31515">&quot;\nc = &quot;</span>);
+      scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;b.real);
+      printf(<span style="color: #a31515">&quot;d = &quot;</span>);
+      scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;b.img);
+    }
+    <span style="color: #0000ff">if</span> (choice == 1)
+    {
+      c.real = a.real + b.real;
+      c.img = a.img + b.img;
+ 
+      <span style="color: #0000ff">if</span> (c.img &gt;= 0)
+        printf(<span style="color: #a31515">&quot;Sum of the complex numbers = %d + %di&quot;</span>, c.real, c.img);
+      <span style="color: #0000ff">else</span>
+        printf(<span style="color: #a31515">&quot;Sum of the complex numbers = %d %di&quot;</span>, c.real, c.img);
+    }
+    <span style="color: #0000ff">else</span> <span style="color: #0000ff">if</span> (choice == 2)
+    {
+      c.real = a.real - b.real;
+      c.img = a.img - b.img;
+ 
+      <span style="color: #0000ff">if</span> (c.img &gt;= 0)
+        printf(<span style="color: #a31515">&quot;Difference of the complex numbers = %d + %di&quot;</span>, c.real, c.img);
+      <span style="color: #0000ff">else</span>
+        printf(<span style="color: #a31515">&quot;Difference of the complex numbers = %d %di&quot;</span>, c.real, c.img);
+    }
+    <span style="color: #0000ff">else</span> <span style="color: #0000ff">if</span> (choice == 3)
+    {
+      c.real = a.real*b.real - a.img*b.img;
+      c.img = a.img*b.real + a.real*b.img;
+ 
+      <span style="color: #0000ff">if</span> (c.img &gt;= 0)
+        printf(<span style="color: #a31515">&quot;Multiplication of the complex numbers = %d + %di&quot;</span>, c.real, c.img);
+      <span style="color: #0000ff">else</span>
+        printf(<span style="color: #a31515">&quot;Multiplication of the complex numbers = %d %di&quot;</span>, c.real, c.img);
+    }
+    <span style="color: #0000ff">else</span> <span style="color: #0000ff">if</span> (choice == 4)
+    {
+      <span style="color: #0000ff">if</span> (b.real == 0 &amp;&amp; b.img == 0)
+        printf(<span style="color: #a31515">&quot;Division by 0 + 0i isn&#39;t allowed.&quot;</span>);
+      <span style="color: #0000ff">else</span>
+      {
+        x = a.real*b.real + a.img*b.img;
+        y = a.img*b.real - a.real*b.img;
+        z = b.real*b.real + b.img*b.img;
+ 
+        <span style="color: #0000ff">if</span> (x%z == 0 &amp;&amp; y%z == 0)
+        {
+          <span style="color: #0000ff">if</span> (y/z &gt;= 0)
+            printf(<span style="color: #a31515">&quot;Division of the complex numbers = %d + %di&quot;</span>, x/z, y/z);
+          <span style="color: #0000ff">else</span>
+            printf(<span style="color: #a31515">&quot;Division of the complex numbers = %d %di&quot;</span>, x/z, y/z);
+        }
+        <span style="color: #0000ff">else</span> <span style="color: #0000ff">if</span> (x%z == 0 &amp;&amp; y%z != 0)
+        {
+          <span style="color: #0000ff">if</span> (y/z &gt;= 0)
+            printf(<span style="color: #a31515">&quot;Division of two complex numbers = %d + %d/%di&quot;</span>, x/z, y, z);
+          <span style="color: #0000ff">else</span>
+            printf(<span style="color: #a31515">&quot;Division of two complex numbers = %d %d/%di&quot;</span>, x/z, y, z);
+        }
+        <span style="color: #0000ff">else</span> <span style="color: #0000ff">if</span> (x%z != 0 &amp;&amp; y%z == 0)
+        {
+          <span style="color: #0000ff">if</span> (y/z &gt;= 0)
+            printf(<span style="color: #a31515">&quot;Division of two complex numbers = %d/%d + %di&quot;</span>, x, z, y/z);
+          <span style="color: #0000ff">else</span>
+            printf(<span style="color: #a31515">&quot;Division of two complex numbers = %d %d/%di&quot;</span>, x, z, y/z);
+        }
+        <span style="color: #0000ff">else</span>
+        {
+          <span style="color: #0000ff">if</span> (y/z &gt;= 0)
+            printf(<span style="color: #a31515">&quot;Division of two complex numbers = %d/%d + %d/%di&quot;</span>,x, z, y, z);
+          <span style="color: #0000ff">else</span>
+            printf(<span style="color: #a31515">&quot;Division of two complex numbers = %d/%d %d/%di&quot;</span>, x, z, y, z);
+        }
+      }
+    }
+    <span style="color: #0000ff">else</span>
+      printf(<span style="color: #a31515">&quot;Invalid choice.&quot;</span>);
+ 
+    printf(<span style="color: #a31515">&quot;\nPress any key to enter choice again...\n&quot;</span>);
+  }
+}
+</pre></div>
+
+          </div>
+           </div>
+          </div>
+        </div>   
+      
+    </div>
+      <!-- Footer -->
+     
+    </div>
+  
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+ 
+  <script src="../assets/js/ocollege.js?v=1.0.0"></script>
+</body>
+
+</html>

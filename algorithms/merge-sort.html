@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Algorithms</title>
+  <!-- Favicon -->
+  <link href="../assets/img/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- ocollege CSS -->
+  <link type="text/css" href="../assets/css/ocollege.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="../index.html">
+        <img src="../assets/img/untitled.png" class="navbar-brand-img" alt="...">
+      </a>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+             
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Form -->
+        
+         <!-- Navigation -->
+          <h4>SORTING</h4>
+            <hr class="my-1">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="fa fa-code"></i>Bubble Sort
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./examples/register.html">
+                <i class="fa fa-code"></i>Optimized Bubble Sort</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="fa fa-code"></i>Quick sort
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="fa fa-code"></i>Cocktail shaker Sort
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="fa fa-code"></i>Odd-even Sort(Brick Sort)
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="fa fa-code"></i>Radix Sort
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./examples/icons.html">
+              <i class="fa fa-code"></i>Selection Sort
+            </a>
+          </li>
+          
+            <li class="nav-item">
+            <a class="nav-link" href="./examples/register.html">
+                <i class="fa fa-code"></i>Heap sort</a>
+       
+            <li class="nav-item">
+            <a class="nav-link" href="./examples/maps.html">
+                <i class="fa fa-code"></i>Stooge sort
+            </a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link" href="./examples/register.html">
+                <i class="fa fa-code"></i>Insertion Sort</a>
+          </li>
+            
+          <li class="nav-item">
+            <a class="nav-link" href="./examples/register.html">
+                <i class="fa fa-code"></i>Shell Sort</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./examples/register.html">
+                <i class="fa fa-code"></i>Tree Sort</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./examples/register.html">
+                <i class="fa fa-code"></i>Merge Sort</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./examples/register.html">
+                <i class="fa fa-code"></i>Intro Sort</a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div class="main-content">
+    <!-- Top navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="basic.html">Merge Sort</a>
+        
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="header bg-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+         
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--10">  
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Merge Sort</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+      <h3>Merge sort is a sorting algorithm that uses the divide, conquer, and combine algorithmic paradigm.</h3>
+                <img src="img/mergesort.png">
+       <h3>Algo</h3> 
+<pre>MERGE (ARR, BEG, MID, END)
+Step 1: [INITIALIZE] SET I=BEG,J=MID+1, INDEX =0 
+Step 2: Repeat while (I &lt;= MID) AND (J&lt;=END) 
+         IF ARR[I]&lt;ARR[J] 
+            SET TEMP[INDEX]=ARR[I] 
+            SET I=I+1 
+         ELSE 
+            SET TEMP[INDEX]=ARR[J] 
+            SET J=J+1 
+        [END OF IF] 
+        SET INDEX=INDEX+1 
+     [END OF LOOP] 
+Step 3: [Copy the remaining elements of right sub-array, if any]
+          IF I&gt;MID 
+             Repeat while J&lt;= END
+                    SET TEMP[INDEX]=ARR[J] 
+                    SET INDEX=INDEX+1, SET J=J+1 
+            [END OF LOOP] 
+       [Copy the remaining elements of left sub-array, if any] 
+         ELSE 
+               Repeat while I&lt;= MID 
+                   SET TEMP[INDEX]=ARR[I] 
+                   SET INDEX=INDEX+1, SETI=I+1 
+              [END OF LOOP] 
+         [END OF IF] 
+Step 4: [Copy the contents of TEMP back to ARR] SET K=0 
+Step 5: Repeat while K &lt; INDEX 
+               SET ARR[K]=TEMP[K] 
+                    SET K=K+1 
+        [END OF LOOP] 
+Step 6: END 
+MERGE_SORT(ARR, BEG, END) 
+Step 1: IF BEG&lt;END SET MID=(BEG+END)/2 
+            CALL MERGE_SORT (ARR, BEG, MID) 
+            CALL MERGE_SORT (ARR, MID+1, END) 
+            MERGE (ARR, BEG, MID, END) 
+       [END OF IF] 
+Step 2: END
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Implemation in C</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+ <pre>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt; 
+#define size 100
+void merge(int a[], int, int, int); 
+void merge_sort(int a[],int, int); 
+void main() 
+{ 
+     int arr[size], i, n; 
+     printf("Enter the size of array : "); 
+     scanf("%d", &amp;n); 
+     printf("\n Enter the elements of the array: "); 
+     for(i=0;i&lt;n;i++) 
+     {  
+       scanf("%d", &amp;arr[i]); 
+     } 
+     merge_sort(arr, 0, n-1); 
+     printf("\n The sorted array is: \n"); 
+     for(i=0;i&lt;n;i++) 
+     printf(" %d ", arr[i]);
+} 
+void merge(int arr[], int beg, int mid, int end) 
+{ 
+    int i=beg, j=mid+1, index=beg, temp[size], k; 
+    while((i&lt;=mid) &amp;&amp; (j&lt;=end)) 
+    {  
+       if(arr[i] &lt; arr[j])  
+         {   
+           temp[index] = arr[i]; 
+           i++; 
+         }  
+     else  
+        {   
+          temp[index] = arr[j];   
+          j++;  
+        }  
+     index++;
+   } 
+    if(i&gt;mid) 
+    {  
+       while(j&lt;=end) 
+        {
+          temp[index] = arr[j];   
+          j++;   
+          index++;  
+         } 
+    } 
+    else 
+    {  
+        while(i&lt;=mid) 
+          {   
+           temp[index] = arr[i]; 
+           i++;  
+           index++; 
+          } 
+} 
+    for(k=beg;k&lt;index;k++) 
+         arr[k] = temp[k];
+} 
+void merge_sort(int arr[], int beg, int end)
+{ 
+       int mid; if(beg&lt;end) 
+     {  
+          mid = (beg+end)/2;  
+          merge_sort(arr, beg, mid);  
+          merge_sort(arr, mid+1, end);  
+          merge(arr, beg, mid, end);
+      }
+}
+</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      <footer class="footer">
+        <div class="row align-items-center justify-content-xl-between">
+          <div class="col-xl-6">
+           <div class="col text-left">
+                  <a href="../courses.html" class="btn btn-sm btn-primary">PREV TUTORIAL</a>
+            </div>
+          </div>
+            <div class="col-xl-6">
+                <div class="col text-right">
+                <a href="operator.html" class="btn btn-sm btn-primary">NEXT TUTORIAL</a>
+          </div>
+            </div>
+          </div>
+      </footer>
+    </div>
+  </div>
+  <!-- ocollege Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ocollege JS -->
+  <script src="../assets/js/ocollege.js?v=1.0.0"></script>
+</body>
+
+</html>

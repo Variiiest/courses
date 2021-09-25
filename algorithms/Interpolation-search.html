@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Algorithms</title>
+  <!-- Favicon -->
+  <link href="../assets/img/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- ocollege CSS -->
+  <link type="text/css" href="../assets/css/ocollege.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="../index.html">
+        <img src="../assets/img/untitled.png" class="navbar-brand-img" alt="...">
+      </a>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+             
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Form -->
+        
+         <!-- Navigation -->
+          <h4>SEARCHING</h4>
+            <hr class="my-1">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="fa fa-code"></i>Linear search
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./examples/register.html">
+                <i class="fa fa-code"></i>Binary Search</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="fa fa-code"></i>Interpolation Search
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./index.html">
+              <i class="fa fa-code"></i>Jump Search
+            </a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <div class="main-content">
+    <!-- Top navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="basic.html">Interpolation Search</a>
+        
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="header bg-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+         
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--10">  
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Interpolation Search</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+  <pre>1:SET LOW = lower_bound,  
+    HIGH = upper_bound, POS = –1 
+2:    Repeat Steps 3 to 4 while LOW &lt;= HIGH 
+3:         SET MID = LOW + (HIGH – LOW) ×  ((VAL – A[LOW]) / (A[HIGH] – A[LOW])) 
+4:          IF VAL = A[MID]  
+               POS = MID   
+               PRINT POS 
+               Go to Step 6
+            ELSE IF VAL &lt; A[MID]
+               SET HIGH = MID – 1
+            ELSE
+                    SET LOW = MID + 1
+            [END OF IF]
+       [END OF LOOP] 
+5: IF POS = –1       
+        PRINT "VALUE IS NOT PRESENT IN THE ARRAY"         
+  [END OF IF] 
+6: EXIT
+</pre>           
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Implemation in C</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+ <pre>
+#include&lt;stdio.h&gt; 
+int interpolationSearch(int arr[], int n, int val) 
+{  
+	int l = 0, b = (n - 1); 
+	while (l &lt;= b &amp;&amp; val &gt;= arr[l] &amp;&amp; val &lt;= arr[b]) 
+	{ 
+		if (l == b){ 
+			if (arr[l] == val) return l; 
+			return -1; 
+		} 
+		int pos = l + (((double)(b-l) / (arr[b]-arr[l]))*(val -arr[l])); 
+		if (arr[pos] == val) 
+			return pos; 
+		if (arr[pos] &lt; val) 
+			l = pos + 1; 
+		else
+			b = pos - 1; 
+	} 
+	return -1; 
+} 
+int main() 
+{ 
+	 int arr[10] ,n,i; 
+    printf("Enter the size of array");
+    scanf("%d",&amp;n);
+    printf("\n Enter the Numbers of Array");
+    for(i=0;i&lt;n;i++)
+    {
+    	scanf("%d",&amp;arr[i]);
+	}
+	int val;
+	printf("Enter number to search");
+	scanf("%d",&amp;val);
+	int result = interpolationSearch(arr, n, val); 
+ 
+	if (result != -1) 
+		printf("Number found at position %d", result+1); 
+	else
+		printf("Number not found."); 
+	return 0; 
+} </pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      <footer class="footer">
+        <div class="row align-items-center justify-content-xl-between">
+          <div class="col-xl-6">
+           <div class="col text-left">
+                  <a href="../courses.html" class="btn btn-sm btn-primary">PREV TUTORIAL</a>
+            </div>
+          </div>
+            <div class="col-xl-6">
+                <div class="col text-right">
+                <a href="operator.html" class="btn btn-sm btn-primary">NEXT TUTORIAL</a>
+          </div>
+            </div>
+          </div>
+      </footer>
+    </div>
+  </div>
+  <!-- ocollege Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ocollege JS -->
+  <script src="../assets/js/ocollege.js?v=1.0.0"></script>
+</body>
+
+</html>

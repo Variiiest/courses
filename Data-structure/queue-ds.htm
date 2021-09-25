@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Queue Data structure</title>
+  <!-- Favicon -->
+  <link href="../assets/img/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- ocollege CSS -->
+  <link type="text/css" href="../assets/css/ocollege.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body style="align-self: auto">
+  <!-- Sidenav -->
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="../index.html">
+        <img src="../assets/img/untitled.png" class="navbar-brand-img" alt="...">
+      </a>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+             
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Form -->
+        
+         <!-- Navigation -->
+          <a href="stack-ds.htm">Previous</a>
+            <hr class="my-1">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#basic" >
+              <i class="fa fa-code"></i>Basic
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#type">
+              <i class="fa fa-code"></i>Type
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#insert">
+              <i class="fa fa-code"></i>Inserting
+
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#example">
+              <i class="fa fa-code"></i>Examples
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="main-content">
+    <!-- Top navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="data-structure.html">Queue</a>
+        
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="header bg-primary pb-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+         
+        </div>
+      </div>
+    </div>
+      
+    <!-- Page content -->
+    <div id="basic" class="container-fluid">  
+            <div class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Queue</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+                <H3>Queue is linear list of elements in which deletion of an element can take place only one end ,called the front and the insertion can take place only at the other     end ,called the rear . </H3>
+                <video autoplay loop style="max-width: 100%">
+  <source src="Presentation1.mp4" type="video/mp4">
+</video>
+                <h3>QUEUE AS ADT</h3>
+          A queue is an object or more specifically an abstract data structure(ADT) that allows the following operations:
+<ul><li>
+Enqueue: Add element to end of queue</li>
+                <li>
+Dequeue: Remove element from front of queue</li>
+                <li>
+IsEmpty: Check if queue is empty</li>
+<li>IsFull: Check if queue is full</li>
+    <li>
+Peek: Get the value of the front of queue without removing it</li>
+                </ul>
+                
+        </div>
+                   </div>
+             <div class="row mt-3 " id="type">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Type of Queue</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+                
+<ul>
+                <li>
+ Circular Queue</li>
+                <li>
+ Priority Queue
+</li>
+<li> Dequeue (Double Ended Queue)</li>
+    <li>
+        Linked Queue</li></ul>
+    <hr>
+    <h3 style="color: blue">Circular Queue</h3>
+    A circular queue is one in which the insertion of a element is done at the very first location if the queue if the last location of the queue is full. New element can be inserted if and only if the those location are empty For example, if we have a queue Q of say n elements , then after inserting an element at last location (i.e in the n-1th) location of the array the next element will be inserted at the very first location( i.e at 0th location) of the array.
+    <hr>
+                <h3 style="color: blue">Priority Queue</h3>
+                A	priority	queue	is	a	data	structure	in	which	each	element	is	assigned	a	priority.	The	priority	of	the	element	will	be	used	to	determine	the	order	in	which	the	elements	will	be	processed.	The	general	rules	of	processing	the	elements	of	a	priority	queue	are 	<ul><li>An	element	with	higher	priority	is	processed	before	an	element	with	a	lower	priority.  </li>
+                <li>Two	elements	with	the	same	priority	are	processed	on	a	first-come-first-served	(FCFS)	basis.</li></ul>
+                <hr>
+                <h3 style="color: blue">Dequeue</h3>
+                A double-ended queue (abbreviated to deque) is an abstract data type that generalizes a queue, for which elements can be added to or removed from either the front (head) or back (tail).It is also often called a head-tail linked list, though properly this refers to a specific data structure implementation of a deque 
+                <a href="https://en.wikipedia.org/wiki/Double-ended_queue">(https://en.wikipedia.org/wiki/Double-ended_queue)</a>
+        </div>
+                   </div>
+             <div id="inserting" class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Inserting and deleting</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+            
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include&lt;stdio.h&gt;</span>
+<span style="color: #0000ff">#define SIZE 5</span>
+<span style="color: #2b91af">void</span> enQueue(<span style="color: #2b91af">int</span>);
+<span style="color: #2b91af">void</span> deQueue();
+<span style="color: #2b91af">void</span> display();
+<span style="color: #2b91af">int</span> items[SIZE], front = -1, rear = -1;
+<span style="color: #2b91af">int</span> main()
+{
+    <span style="color: #008000">//deQueue is not possible on empty queue</span>
+    deQueue();
+    
+    <span style="color: #008000">//enQueue 5 elements</span>
+    enQueue(1);
+    enQueue(2);
+    enQueue(3);
+    enQueue(4);
+    enQueue(5);
+    
+    <span style="color: #008000">//6th element can&#39;t be added to queue because queue is full</span>
+    enQueue(6);
+    
+    display();
+    
+    <span style="color: #008000">//deQueue removes element entered first i.e. 1</span>
+    deQueue();
+    
+    <span style="color: #008000">//Now we have just 4 elements</span>
+    display();
+    
+    <span style="color: #0000ff">return</span> 0;
+    
+}
+<span style="color: #2b91af">void</span> enQueue(<span style="color: #2b91af">int</span> value){
+    <span style="color: #0000ff">if</span>(rear == SIZE-1)
+        printf(<span style="color: #a31515">&quot;\nQueue is Full!!&quot;</span>);
+    <span style="color: #0000ff">else</span> {
+        <span style="color: #0000ff">if</span>(front == -1)
+            front = 0;
+        rear++;
+        items[rear] = value;
+        printf(<span style="color: #a31515">&quot;\nInserted -&gt; %d&quot;</span>, value);
+    }
+}
+<span style="color: #2b91af">void</span> deQueue(){
+    <span style="color: #0000ff">if</span>(front == -1)
+        printf(<span style="color: #a31515">&quot;\nQueue is Empty!!&quot;</span>);
+    <span style="color: #0000ff">else</span>{
+        printf(<span style="color: #a31515">&quot;\nDeleted : %d&quot;</span>, items[front]);
+        front++;
+        <span style="color: #0000ff">if</span>(front &gt; rear)
+            front = rear = -1;
+    }
+}
+<span style="color: #2b91af">void</span> display(){
+    <span style="color: #0000ff">if</span>(rear == -1)
+        printf(<span style="color: #a31515">&quot;\nQueue is Empty!!!&quot;</span>);
+    <span style="color: #0000ff">else</span>{
+        <span style="color: #2b91af">int</span> i;
+        printf(<span style="color: #a31515">&quot;\nQueue elements are:\n&quot;</span>);
+        <span style="color: #0000ff">for</span>(i=front; i&lt;=rear; i++)
+            printf(<span style="color: #a31515">&quot;%d\t&quot;</span>,items[i]);
+    }
+
+}
+</pre></div>               </div>
+            </div>
+       
+             
+     <div id="example" class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Examples</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+                <ul><li><a href="#">Simple	Circular	Array	Implementation</a></li>
+                <li><a href="#">Linked Queue implementation/a></li>
+                <li><a href="#">Dynamic	Circular	Array	Implementation</a></li>
+                <li><a href="#">Implement multiple queues</a></li>
+                <li><a href="#">C program to calculate the number of items in a queue.</a></li>
+                    </ul>
+         
+                
+                 <div class="row align-items-center ">
+                <div class="col text-right">
+                <a href="../algorithms/binary-Search.html" class="btn btn-sm btn-primary">NEXT TUTORIAL</a>
+            </div>
+                      </div>
+            </div>
+                         </div>
+                        </div>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+        
+  <!-- ocollege Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ocollege JS -->
+  <script src="../assets/js/ocollege.js?v=1.0.0"></script>
+    
+</body>
+
+</html>

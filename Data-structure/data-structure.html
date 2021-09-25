@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Data structure</title>
+  <!-- Favicon -->
+  <link href="../assets/img/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- ocollege CSS -->
+  <link type="text/css" href="../assets/css/ocollege.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body style="align-self: auto">
+  <!-- Sidenav -->
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="../index.html">
+        <img src="../assets/img/untitled.png" class="navbar-brand-img" alt="...">
+      </a>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+             
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Form -->
+        
+         <!-- Navigation -->
+          <a href="../data-structure-overview.html">Previous </a>
+            <hr class="my-1">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#precedence">
+              <i class="fa fa-code"></i>PRECEDENCE 
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#data">
+              <i class="fa fa-code"></i>DATA STRUCTURE
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#term">
+              <i class="fa fa-code"></i>TERMS IN DATA STRUCTURE
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#class">
+              <i class="fa fa-code"></i>CLASSES OF DS
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#operation">
+              <i class="fa fa-code"></i>OPERATION ON DS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#traversing">
+              <i class="fa fa-code"></i>TRAVERSING
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#searching">
+              <i class="fa fa-code"></i>SEARCHING
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#inserting">
+              <i class="fa fa-code"></i>INSERTING
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#deleting">
+              <i class="fa fa-code"></i>DELETING
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rotating">
+              <i class="fa fa-code"></i>ROTATING
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sorting">
+              <i class="fa fa-code"></i>SORTING
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#merging">
+              <i class="fa fa-code"></i>MERGING
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#abstract-data-type">
+              <i class="fa fa-code"></i>ABSTRACT DATA TYPE
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="main-content">
+    <!-- Top navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="data-structure.html">DATA STRUCTURE</a>
+        
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="header bg-primary pb-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+         
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div id="precedence" class="container-fluid">  
+      <div class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Precedence chart</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+      <div class="table-responsive">
+         <table class="table align-items-center table-flush"> 
+<tbody><tr> 
+<th >Category</th> 
+<th >Operator</th>
+<th >Associativity</th> 
+</tr> 
+<tr> 
+<td>Postfix</td>
+<td>() [] -&gt; . ++ - -</td> 
+<td>Left to right</td> 
+</tr>
+<tr> 
+<td>Unary</td> 
+<td>+  -  !  ~  ++  - -  (type)*  &amp; sizeof</td> 
+<td>Right to left</td>
+</tr> 
+<tr> 
+<td>Multiplicative</td> 
+<td>*  /  %</td>
+<td>Left to right</td> 
+</tr> 
+<tr> 
+<td>Additive</td>
+<td>+  -</td> 
+<td>Left to right</td> 
+</tr>
+<tr> 
+<td>Shift</td> 
+<td>&lt;&lt; &gt;&gt;</td> 
+<td>Left to right</td> 
+</tr> 
+<tr> 
+<td>Relational</td>
+<td>&lt; &lt;=  &gt; &gt;=</td> 
+<td>Left to right</td> 
+</tr>
+<tr> 
+<td>Equality</td> 
+<td>==  !=</td> 
+<td>Left to right</td> 
+</tr> 
+<tr> 
+<td>Bitwise AND</td>
+<td>&amp;</td> 
+<td>Left to right</td> 
+</tr> 
+<tr> 
+<td>Bitwise XOR</td> 
+<td>^</td> 
+<td>Left to right</td>
+</tr> 
+<tr> 
+<td>Bitwise OR</td> 
+<td>|</td> 
+<td>Left to right</td>
+</tr> 
+<tr> 
+<td>Logical AND</td>
+<td>&amp;&amp;</td> 
+<td>Left to right</td>
+</tr>
+<tr>
+<td>Logical OR</td> 
+<td>||</td> 
+<td>Left to right</td>
+</tr> 
+<tr> 
+<td>Conditional</td>
+<td>?:</td> 
+<td>Right to left</td> 
+</tr>
+<tr>
+<td>Assignment</td> 
+<td>=  +=  -=  *=  /=  %=&gt;&gt;=  &lt;&lt;=  &amp;=  ^= |=</td>
+<td>Right to left</td>
+</tr>
+<tr> 
+<td>Comma</td> 
+<td>,</td> 
+<td>Left to right</td>
+</tr> 
+</tbody></table>
+                </div>
+              </div>
+            </div>
+              <div id="data">  
+      <div class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white ">Data-Structure</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+               <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+                <h3>A storage of data elements under a name called as DS.</h3>
+            <pre>char vowel[5]={'a','e','i','o','u'};</pre>    
+    <h3>vowel is the name of data structure.And stored vowels are data elements.</h3>
+                
+           </div>
+            </div>
+                 <div id="term">  
+      <div class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white ">Data-Structure Terms</h3>
+            </div>
+          </div>
+        </div>
+      </div>        
+    </div>
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+                <img src="Picture1.png" style="max-width: 90%" alt="data">
+                <ul><li><b>Data: A particular value or set of values.</b></li>
+                <li><b>Record: Record  is collection of data.</b></li>
+                <li><b>File: File is collection of records.</b> </li></ul>
+  </div>
+      </div>
+            <div id="class" class="main-content">
+     <div class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Classes in DS </h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+                                                <h3>Primitive Data Structure</h3>
+                                            <ul>
+                                                <li>Integer(int)</li>
+                                                <li>Character(char)</li>
+                                                <li>Floating point Numbers(float)</li>
+                                                <li>Pointers</li>
+                                                <li>String Constant</li>
+                                            </ul>
+                               
+                                                <h3>Non-primitive Data types</h3>
+                                            <ol>
+                                                <li>Linear<ol>
+                                                    <li>Array</li>
+                                                   <li>Stack</li>
+                                                    <li>Queues</li>
+                                                    <li>Linked List</li></ol></li>
+                                                <li>Non-linear
+                                                    <ol>
+                                                        <li>Trees</li>
+                                                        <li>Graphs</li>
+                                                    </ol>
+                                            </li></ol>
+                        
+          </div>
+                        </div>
+              <div id="operation" class="row mt-3">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Operations</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+                                            <ul>
+                                                <li>TRAVERSING</li>
+                                                <li>SEARCHING</li>
+                                                <li>INSERTING</li>
+                                                <li>DELETING</li>
+                                                <li>ROTATING</li>
+                                                <li>SORTING</li>
+                                                <LI>MERGING</LI>
+                                            </ul>
+           </div>
+            </div>
+               <div id="traversing" class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">TRAVERSING</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+                <H3>To access each data-item</H3>
+                <video autoplay loop style="max-width: 100%">
+  <source src="Presentation1.mp4" type="video/mp4">
+</video>
+                <h3>TRAVERSING</h3>
+               <div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include&lt;stdio.h&gt;</span>
+  <span style="color: #008000">//READ AN ARRAY DS                                                    </span>
+<span style="color: #2b91af">int</span> main()   
+ {
+    <span style="color: #2b91af">int</span> i,n,arr[10];
+    printf(<span style="color: #a31515">&quot;Enter the number of elements in Array&quot;</span>);
+    scanf(<span style="color: #a31515">&quot;%d&quot;</span>,&amp;n);
+    <span style="color: #0000ff">for</span>(i=0;i&lt;n;i++);
+        {
+         printf(<span style="color: #a31515">&quot;arr[%d]=&quot;</span>,i);
+         scanf(<span style="color: #a31515">&quot;%d&quot;</span>,&amp;arr[i]);
+        }
+    printf(<span style="color: #a31515">&quot;Elements=\n&quot;</span>);
+   <span style="color: #0000ff">for</span>(i=0;i&lt;n;i++)
+       {
+        printf(<span style="color: #a31515">&quot;%d\n&quot;</span>,arr[i]);
+       }
+       <span style="color: #0000ff">return</span> 0;
+ }        
+</pre></div>
+
+        </div>
+                   </div>
+             <div id="searching" class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Searching</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include&lt;stdio.h&gt;</span>
+<span style="color: #2b91af">int</span> main()
+{
+   <span style="color: #2b91af">int</span> array[100], search, c, n, count = 0;
+   
+   printf(<span style="color: #a31515">&quot;Enter number of elements in array\n&quot;</span>);
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;n);
+   
+   printf(<span style="color: #a31515">&quot;Enter %d numbers\n&quot;</span>, n);
+   
+   <span style="color: #0000ff">for</span> (c = 0; c &lt; n; c++)
+      scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;array[c]);
+     
+   printf(<span style="color: #a31515">&quot;Enter a number for searching\n&quot;</span>);
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;search);
+   
+   <span style="color: #0000ff">for</span> (c = 0; c &lt; n; c++) {
+      <span style="color: #0000ff">if</span> (array[c] == search) {
+         printf(<span style="color: #a31515">&quot;%d is present at location %d.\n&quot;</span>, search, c+1);
+         count++;
+      }
+   }
+   <span style="color: #0000ff">if</span> (count == 0)
+      printf(<span style="color: #a31515">&quot;%d isn&#39;t present in the array.\n&quot;</span>, search);
+   <span style="color: #0000ff">else</span>
+      printf(<span style="color: #a31515">&quot;%d is present %d times in the array.\n&quot;</span>, search, count);
+     
+   <span style="color: #0000ff">return</span> 0; 
+}
+</pre></div>
+
+          
+                  </div>
+            </div>
+            <div id="inserting" class="row mt-3">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Inserting</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+ <div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include&lt;stdio.h&gt;</span>
+<span style="color: #0000ff">#include&lt;string.h&gt; </span>                                                
+   <span style="color: #008000">//Inserting a new string in main string</span>
+   <span style="color: #2b91af">int</span> main()
+        {
+          <span style="color: #2b91af">char</span> string[100],new_string[100],l_string[100];
+          <span style="color: #2b91af">int</span> p,i,j=0,k=0;
+          printf(<span style="color: #a31515">&quot;Enter the main string&quot;</span>);
+          gets(string);
+          printf(<span style="color: #a31515">&quot;Enter the new string&quot;</span>);
+          gets(new_string);
+          printf(<span style="color: #a31515">&quot;Enter the inserting position&quot;</span>);
+          scanf(<span style="color: #a31515">&quot;%d&quot;</span>,&amp;p);
+          <span style="color: #0000ff">for</span>(i=0;i&lt;string[i]!=0;i++)
+             {
+               <span style="color: #0000ff">if</span>(i==p)
+               {
+                 <span style="color: #0000ff">while</span>(new_string[j]!=0)
+                 {
+                  l_string[k]=new_string[j];
+                  k++;
+                  j++;
+                 }
+               }
+               <span style="color: #0000ff">else</span>
+               {
+                l_string[k]=string[i];
+                k++;
+               }
+             }
+           l_string[k]=<span style="color: #a31515">&#39;\0&#39;</span>;
+           printf(<span style="color: #a31515">&quot;String after inserting&quot;</span>);
+           puts(l_string);
+           <span style="color: #0000ff">return</span> 0;
+        }
+                                  
+</pre></div>
+
+          </div>
+            </div>
+               <div class="row mt-3">
+        <div id="deleting" class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Deleting</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+           <div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include&lt;stdio.h&gt;</span>
+<span style="color: #0000ff">#include&lt;stdlib.h&gt; </span>
+<span style="color: #0000ff">#include&lt;conio.h&gt; </span>
+<span style="color: #0000ff">#include&lt;malloc.h&gt; </span>
+   <span style="color: #008000">//Delete a node from given linked list</span>
+   <span style="color: #0000ff">struct</span> Node 
+   { 
+	<span style="color: #2b91af">int</span> data; 
+	<span style="color: #0000ff">struct</span> Node *next; 
+   };
+   <span style="color: #2b91af">void</span> push(<span style="color: #0000ff">struct</span> Node** head, <span style="color: #2b91af">int</span> new_data) 
+   { 
+	<span style="color: #0000ff">struct</span> Node* new_node = (<span style="color: #0000ff">struct</span> Node*) malloc(<span style="color: #0000ff">sizeof</span>(<span style="color: #0000ff">struct</span> Node)); 
+	new_node-&gt;data = new_data; 
+	new_node-&gt;next = (*head); 
+	(*head) = new_node; 
+   } 
+
+   <span style="color: #2b91af">void</span> deleteNode(<span style="color: #0000ff">struct</span> Node **head, <span style="color: #2b91af">int</span> key) 
+   { 
+	<span style="color: #0000ff">struct</span> Node* temp = *head, *prev; 
+	<span style="color: #0000ff">if</span> (temp != NULL &amp;&amp; temp-&gt;data == key) 
+	{ 
+		*head = temp-&gt;next;
+		free(temp);	
+		<span style="color: #0000ff">return</span>; 
+	} 
+	<span style="color: #0000ff">while</span> (temp != NULL &amp;&amp; temp-&gt;data != key) 
+	{ 
+		prev = temp; 
+		temp = temp-&gt;next; 
+	} 
+
+	<span style="color: #0000ff">if</span> (temp == NULL) <span style="color: #0000ff">return</span>;
+	prev-&gt;next = temp-&gt;next; 
+	free(temp);
+  } 
+  <span style="color: #2b91af">void</span> printList(<span style="color: #0000ff">struct</span> Node *node) 
+  { 
+	<span style="color: #0000ff">while</span> (node != NULL) 
+	{ 
+		printf(<span style="color: #a31515">&quot; %d &quot;</span>, node-&gt;data); 
+		node = node-&gt;next; 
+	} 
+  } 
+
+ <span style="color: #2b91af">int</span> main()
+     {
+      	<span style="color: #0000ff">struct</span> Node* head = NULL;
+	<span style="color: #2b91af">int</span> i; 
+
+	push(&amp;head, 9); 
+	push(&amp;head, 14); 
+	push(&amp;head, 34); 
+	push(&amp;head, 45); 
+    push(&amp;head, 55); 
+	puts(<span style="color: #a31515">&quot;Linked List: &quot;</span>); 
+	printList(head);
+	printf(<span style="color: #a31515">&quot;\n Enter the node :&quot;</span>);
+	scanf(<span style="color: #a31515">&quot;%d&quot;</span>,&amp;i);
+	deleteNode(&amp;head, i); 
+	puts(<span style="color: #a31515">&quot;\nLinked List after Deletion: &quot;</span>); 
+	printList(head); 
+	<span style="color: #0000ff">return</span> 0; 
+   }              
+</pre></div>
+
+          </div>
+            </div>
+                     <div id="rotating" class="row mt-3">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Rotating</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+ <div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include&lt;stdio.h&gt;</span>
+<span style="color: #2b91af">void</span> RotatebyOne(<span style="color: #2b91af">int</span> arr[], <span style="color: #2b91af">int</span> n); 
+<span style="color: #2b91af">int</span> main()
+<span style="color: #008000">//Array rotation</span>
+<span style="color: #2b91af">void</span> leftRotate(<span style="color: #2b91af">int</span> arr[], <span style="color: #2b91af">int</span> d, <span style="color: #2b91af">int</span> n) 
+{     
+  <span style="color: #2b91af">int</span> i;     
+  <span style="color: #0000ff">for</span> (i = 0; i &lt;n,i++)
+  RotatebyOne(arr, n);
+}
+<span style="color: #2b91af">void</span> RotatebyOne(<span style="color: #2b91af">int</span> arr[], <span style="color: #2b91af">int</span> n)
+{     
+  <span style="color: #2b91af">int</span> temp = arr[0], i;    
+  <span style="color: #0000ff">for</span> (i=0;in;i++)
+  arr[i] = arr[i + 1];     
+  arr[i] = temp; 
+ }
+ <span style="color: #2b91af">void</span> print(<span style="color: #2b91af">int</span> arr[], <span style="color: #2b91af">int</span> n) 
+ {     
+  <span style="color: #2b91af">int</span> i;    
+  <span style="color: #0000ff">for</span> (i = 0; i &lt; n; i++)         
+  printf(<span style="color: #a31515">&quot;%d &quot;</span>, arr[i]); 
+ }
+  <span style="color: #2b91af">int</span> main()
+  {    
+  <span style="color: #2b91af">int</span> arr[] = { 1, 2, 3, 4, 5, 6, 7 };     
+  leftRotate(arr, 2, 7);     
+  printArray(arr, 7);     
+  <span style="color: #0000ff">return</span> 0; 
+}
+</pre></div>
+              </div>
+     </div>
+                    <div class="row mt-3">
+        <div id="sorting" class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Sorting</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include &lt;stdio.h&gt;</span>
+<span style="color: #0000ff">#include &lt;conio.h&gt;</span>
+ <span style="color: #2b91af">int</span> main()
+     { 
+        <span style="color: #2b91af">int</span> i, n, temp, j, arr[10];
+        printf(<span style="color: #a31515">&quot;\n Enter the size of array : &quot;</span>);
+        scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;n);
+        printf(<span style="color: #a31515">&quot;\n Enter the elements: &quot;</span>);
+        <span style="color: #0000ff">for</span>(i=0;i&lt;n;i++)
+        {  
+          scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;arr [i]);
+        } 
+        <span style="color: #0000ff">for</span>(i=0;i&lt;n;i++) 
+        {  
+          <span style="color: #0000ff">for</span>(j=0;j&lt;n<span style="border: 1px solid #FF0000">–</span>i<span style="border: 1px solid #FF0000">–</span>1;j++)
+          {  
+          <span style="color: #0000ff">if</span>(arr[j] &gt; arr[j+1]) 
+          {    
+          temp = arr[j];    
+          arr[j] = arr[j+1];   
+          arr[j+1] = temp;  
+          } 
+        }
+        } 
+        printf(<span style="color: #a31515">&quot;\n Ascending order is :\n&quot;</span>);
+        <span style="color: #0000ff">for</span>(i=0;i&gt;n;i++)  
+        printf(<span style="color: #a31515">&quot;%d\t&quot;</span>, arr[i]); 
+        <span style="color: #0000ff">return</span> 0;
+    } 
+ 
+</pre></div>
+
+                <h3>OUTPUT</h3>
+                <pre>  Enter the size of array: 3
+  Enter the elements:1
+  5
+  3
+  Ascending order is
+  1
+  3
+  5
+</pre>
+       </div>
+         </div>
+                         <div class="row mt-3">
+        <div id="merging" class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Merging</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include&lt;stdio.h&gt;</span>
+<span style="color: #0000ff">#include&lt;conio.h&gt;</span>
+<span style="color: #2b91af">void</span> main()
+{
+	<span style="color: #2b91af">int</span> arr1[50], arr2[50], size1, size2, size, i, j, k, merge[100];
+	printf(<span style="color: #a31515">&quot;Enter Array 1 Size : &quot;</span>);
+	scanf(<span style="color: #a31515">&quot;%d&quot;</span>,&amp;size1);
+	printf(<span style="color: #a31515">&quot;Enter Array 1 Elements : &quot;</span>);
+	<span style="color: #0000ff">for</span>(i=0; i&lt;size1; i++)
+	{
+		scanf(<span style="color: #a31515">&quot;%d&quot;</span>,&amp;arr1[i]);
+	}
+	printf(<span style="color: #a31515">&quot;Enter Array 2 Size : &quot;</span>);
+	scanf(<span style="color: #a31515">&quot;%d&quot;</span>,&amp;size2);
+	printf(<span style="color: #a31515">&quot;Enter Array 2 Elements : &quot;</span>);
+	<span style="color: #0000ff">for</span>(i=0; i&lt;size2; i++)
+	{
+		scanf(<span style="color: #a31515">&quot;%d&quot;</span>,&amp;arr2[i]);
+	}
+	<span style="color: #0000ff">for</span>(i=0; i&lt;size1; i++)
+	{
+		merge[i]=arr1[i];
+	}
+	size=size1+size2;
+	<span style="color: #0000ff">for</span>(i=0, k=size1; k&lt;size &amp;&amp; i&lt;size2; i++, k++)
+	{
+		merge[k]=arr2[i];
+	}
+	printf(<span style="color: #a31515">&quot;Now the new array after merging is :\n&quot;</span>);
+	<span style="color: #0000ff">for</span>(i=0; i&lt;size; i++)
+	{
+		printf(<span style="color: #a31515">&quot;%d  &quot;</span>,merge[i]);
+	}
+}
+</pre></div>
+       </div>
+         </div>
+             <div id="abstract-data-type" class="row mt-3">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">ABSTRACT DATA TYPE</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row ">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+ <h3>ABSTRACT DATA TYPE</h3>
+                 Abstract data type is a look of objects whose logical behaviour is defined by a set of values and set of operations.
+                <h3>ADVANTAGE</h3>
+                <ul>
+                <li>Localization of change</li>
+                <li>Flexibility</li></ul>
+                <h3>OPERATION </h3>
+                Some operations that are often spechified for Abstract data type. 
+              <ul>  <li>compare()</li>
+                <li>hash()</li>
+                <li>print() or show()</li></ul>
+                 <div class="row align-items-center ">
+                <div class="col text-right">
+                <a href="./recursion.html" class="btn btn-sm btn-primary">NEXT TUTORIAL</a>
+            </div>
+          </div>
+            </div>
+          </div>
+            </div>
+          </div>
+            </div>
+          </div>
+            </div>
+          </div>
+            </div>
+            </div>
+               </div>
+                 </div>
+                   </div>
+                   </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            </div>
+          </div>
+        </div></div>
+          </div></div></div></div>
+            </div></div></div></div>
+    </div>
+  <!-- ocollege Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ocollege JS -->
+  <script src="../assets/js/ocollege.js?v=1.0.0"></script>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Array Data structure</title>
+  <!-- Favicon -->
+  <link href="../assets/img/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- ocollege CSS -->
+  <link type="text/css" href="../assets/css/ocollege.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body style="align-self: auto">
+  <!-- Sidenav -->
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="../index.html">
+        <img src="../assets/img/untitled.png" class="navbar-brand-img" alt="...">
+      </a>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+             
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Form -->
+        
+         <!-- Navigation -->
+          <a href="recursion.html">PREVIOUS</a>
+            <hr class="my-1">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../c-programming/array-in-c.html">
+              <i class="fa fa-code"></i>Basic
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#traversing">
+              <i class="fa fa-code"></i>Travesing
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#searching">
+              <i class="fa fa-code"></i>Searching
+
+            </a>
+          </li>
+              <li class="nav-item">
+            <a class="nav-link" href="#inserting">
+              <i class="fa fa-code"></i>Inserting
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#merging">
+              <i class="fa fa-code"></i>Merging
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#deleting">
+              <i class="fa fa-code"></i>Deleting
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sorting">
+              <i class="fa fa-code"></i>Sorting
+            </a>
+          </li>
+             <li class="nav-item">
+            <a class="nav-link" href="#rotating">
+              <i class="fa fa-code"></i>Rotating
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="fa fa-code"></i>2-D Array
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="">
+                <i class="fa fa-code"></i>M-D Array
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#examples">
+              <i class="fa fa-code"></i>Examples
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="main-content">
+    <!-- Top navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="array-ds.htm">Array</a>
+        
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="header bg-primary pb-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+         
+        </div>
+      </div>
+    </div>
+      
+    <!-- Page content -->
+    <div id="traversing" class="container-fluid">  
+            <div class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Traversing</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+                <H3>To access each data-item</H3>
+                <video autoplay loop style="max-width: 100%">
+  <source src="Presentation1.mp4" type="video/mp4">
+</video>
+                <h3>TRAVERSING</h3>
+             <div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include&lt;stdio.h&gt;</span>
+  <span style="color: #008000">//READ AN ARRAY DS                                                    </span>
+<span style="color: #2b91af">int</span> main()   
+ {
+    <span style="color: #2b91af">int</span> i,n,arr[10];
+    printf(<span style="color: #a31515">&quot;Enter the number of elements in Array&quot;</span>);
+    scanf(<span style="color: #a31515">&quot;%d&quot;</span>,&amp;n);
+    <span style="color: #0000ff">for</span>(i=0;i&lt;n;i++);
+        {
+         printf(<span style="color: #a31515">&quot;arr[%d]=&quot;</span>,i);
+         scanf(<span style="color: #a31515">&quot;%d&quot;</span>,&amp;arr[i]);
+        }
+    printf(<span style="color: #a31515">&quot;Elements=\n&quot;</span>);
+   <span style="color: #0000ff">for</span>(i=0;i&lt;n;i++)
+       {
+        printf(<span style="color: #a31515">&quot;%d\n&quot;</span>,arr[i]);
+       }
+       <span style="color: #0000ff">return</span> 0;
+ }                
+</pre></div>
+
+        </div>
+          </div>
+             <div id="searching" class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Searching</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include&lt;stdio.h&gt;</span>
+<span style="color: #2b91af">int</span> main()
+{
+   <span style="color: #2b91af">int</span> array[100], search, c, n, count = 0;
+   
+   printf(<span style="color: #a31515">&quot;Enter number of elements in array\n&quot;</span>);
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;n);
+   
+   printf(<span style="color: #a31515">&quot;Enter %d numbers\n&quot;</span>, n);
+   
+   <span style="color: #0000ff">for</span> (c = 0; c &lt; n; c++)
+      scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;array[c]);
+     
+   printf(<span style="color: #a31515">&quot;Enter a number for searching\n&quot;</span>);
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;search);
+   
+   <span style="color: #0000ff">for</span> (c = 0; c &lt; n; c++) {
+      <span style="color: #0000ff">if</span> (array[c] == search) {
+         printf(<span style="color: #a31515">&quot;%d is present at location %d.\n&quot;</span>, search, c+1);
+         count++;
+      }
+   }
+   <span style="color: #0000ff">if</span> (count == 0)
+      printf(<span style="color: #a31515">&quot;%d isn&#39;t present in the array.\n&quot;</span>, search);
+   <span style="color: #0000ff">else</span>
+      printf(<span style="color: #a31515">&quot;%d is present %d times in the array.\n&quot;</span>, search, count);
+     
+   <span style="color: #0000ff">return</span> 0; 
+} 
+</pre></div>
+              </div>
+            </div>
+            <div id="inserting" class="row mt-3">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Inserting</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+ <div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include&lt;stdio.h&gt;</span>
+<span style="color: #0000ff">#include &lt;conio.h&gt;</span>
+<span style="color: #2b91af">int</span> main()
+ {
+   <span style="color: #2b91af">int</span> i, n, num, p, arr[10];
+   printf(<span style="color: #a31515">&quot;\n Enter the number of elements in the array : &quot;</span>);
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;n); 
+   <span style="color: #0000ff">for</span>(i=0;i&lt;n;i++)
+ {  
+   printf(<span style="color: #a31515">&quot;\n arr[%d] = &quot;</span>, i); 
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;arr[i]); 
+ } 
+   printf(<span style="color: #a31515">&quot;\n Enter the number to be inserted : &quot;</span>);
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;num); 
+   printf(<span style="color: #a31515">&quot;\n Enter the position at which the number has to be added : &quot;</span>);
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;p);
+   <span style="color: #0000ff">for</span>(i=n<span style="border: 1px solid #FF0000">–</span>1;i&gt;=p;i<span style="border: 1px solid #FF0000">––</span>) 
+        arr[i+1] = arr[i]; 
+        arr[p] = num;
+               n = n+1;
+   printf(<span style="color: #a31515">&quot;\n The array after insertion of %d is : &quot;</span>, num); 
+   <span style="color: #0000ff">for</span>(i=0;i&lt;n;i++) 
+     printf(<span style="color: #a31515">&quot;\n arr[%d] = %d&quot;</span>, i, arr[i]);
+  <span style="color: #0000ff">return</span> 0;
+ } 	
+</pre></div>      
+          </div>
+            </div>
+            <div id="deleting" class="main-content">
+     <div class="row mt-3 ">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Deleting</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+  <div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include &lt;stdio.h&gt;</span>
+<span style="color: #0000ff">#include &lt;conio.h&gt; </span>
+<span style="color: #2b91af">int</span> main() 
+{
+ <span style="color: #2b91af">int</span> i, n, p, arr[10];
+ printf(<span style="color: #a31515">&quot;\n Enter the number of elements in the array : &quot;</span>); 
+ scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;n); 
+ <span style="color: #0000ff">for</span>(i=0;i&lt;n;i++)
+ { 
+   printf(<span style="color: #a31515">&quot;\n arr[%d] = &quot;</span>, i); 
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;arr[i]);
+ } 
+   printf(<span style="color: #a31515">&quot;\nEnter the position: &quot;</span>);
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;p); 
+   <span style="color: #0000ff">for</span>(i=pos; i&lt;n<span style="border: 1px solid #FF0000">–</span>1;i++)  
+      arr[i] = arr[i+1]; 
+           n<span style="border: 1px solid #FF0000">––</span>;
+   printf(<span style="color: #a31515">&quot;\n The array after deletion is : &quot;</span>); 
+   <span style="color: #0000ff">for</span>(i=0;i&lt;n;i++) 
+   printf(<span style="color: #a31515">&quot;\n arr[%d] = %d&quot;</span>, i, arr[i]);
+   <span style="color: #0000ff">return</span> 0;
+ }
+</pre></div>
+                        
+          </div>
+                        </div>
+              <div id="merging" class="row mt-3">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Merging</h3>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+        <div style="background: #ffffff; overflow:auto;width:auto;border:solid blue;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #0000ff">#include &lt;stdio.h&gt;</span>
+<span style="color: #0000ff">#include &lt;conio.h&gt; </span>
+<span style="color: #2b91af">int</span> main() 
+{ 
+ <span style="color: #2b91af">int</span> arr1[10], arr2[10], arr3[20];
+ <span style="color: #2b91af">int</span> i, n1, n2, m, j=0;
+ printf(<span style="color: #a31515">&quot;\n Enter the number of elements in array1 : &quot;</span>); 
+ scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;n1); 
+ printf(<span style="color: #a31515">&quot;\n\n Enter the elements of the first array&quot;</span>); 
+ <span style="color: #0000ff">for</span>(i=0;i&lt;n1;i++)
+ {\
+   printf(<span style="color: #a31515">&quot;\n arr1[%d] = &quot;</span>, i);  
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;arr1[i]);
+ }
+   printf(<span style="color: #a31515">&quot;\n Enter the number of elements in array2 : &quot;</span>); 
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;n2); 
+   printf(<span style="color: #a31515">&quot;\n\n Enter the elements of the second array&quot;</span>); 
+   <span style="color: #0000ff">for</span>(i=0;i&lt;n2;i++) 
+{  
+   printf(<span style="color: #a31515">&quot;\n arr2[%d] = &quot;</span>, i);
+   scanf(<span style="color: #a31515">&quot;%d&quot;</span>, &amp;arr2[i]);
+}
+   m = n1+n2; 
+   <span style="color: #0000ff">for</span>(i=0;i&lt;n1;i++)
+{ 
+   arr3[j] = arr1[i]; 
+   j++;
+} 
+  <span style="color: #0000ff">for</span>(i=0;i&lt;n2;i++)
+{  
+  arr3[j] = arr2[i];  
+  j++; 
+} 
+   printf(<span style="color: #a31515">&quot;\n\n The merged array is&quot;</span>); 
+   <span style="color: #0000ff">for</span>(i=0;i&lt;m;i++)  
+   printf(<span style="color: #a31515">&quot;\n arr[%d] = %d&quot;</span>, i, arr3[i]);
+   <span style="color: #0000ff">return</span> 0;
+ } 
+</pre></div>              
+           </div>
+            </div>
+  
+                        <div id="examples" class="row mt-3 ">
+        <div class="col" id="examples">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Examples</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+               UPDATED SOON
+                
+                 <div class="row align-items-center ">
+                <div class="col text-right">
+                <a href="string-ds.htm" class="btn btn-sm btn-primary">NEXT TUTORIAL</a>
+            </div>
+                      </div>
+            </div>
+                         </div>
+                        </div>
+                       </div>
+                      </div>
+                     </div>
+          </div>
+                </div>
+            </div>
+                 </div>
+                </div>
+              </div>
+             </div>
+          </div>
+      </div>
+    </div>
+    </div>
+       
+  <!-- ocollege Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ocollege JS -->
+  <script src="../assets/js/ocollege.js?v=1.0.0"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>C-PROGRAMMING/BASIC</title>
+  <!-- Favicon -->
+  <link href="../assets/img/untitled.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <!-- ocollege CSS -->
+  <link type="text/css" href="../assets/css/ocollege.css?v=1.0.0" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="../index.html">
+        <img src="../assets/img/untitled.png" class="navbar-brand-img" alt="...">
+      </a>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+             
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Form -->
+    <!-- Navigation -->
+          <h4>C-PROGRAMMING</h4>
+            <hr class="my-1">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="basic.html">
+              <i class="fa fa-code"></i>BASIC
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./storage.html">
+              <i class="fa fa-code"></i>STORAGE CLASS
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./error-in-c.html">
+              <i class="fa fa-code"></i>ERROR IN C
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./library.html">
+              <i class="fa fa-code"></i>LIBRARY FUNCTIONS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./control.html">
+              <i class="fa fa-code"></i>CONTROL
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./function-in-c.html">
+              <i class="fa fa-code"></i>FUNCTION
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./pointer-in-c.html">
+              <i class="fa fa-code"></i>POINTER
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./array-in-c.html">
+              <i class="fa fa-code"></i>ARRAY
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./strings-in-c.html">
+              <i class="fa fa-code"></i>STRING
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./structure-in-c.html">
+              <i class="fa fa-code"></i>STRUCTURE
+            </a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="./union-in-c.html">
+              <i class="fa fa-code"></i>UNIONS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./dynamic-memory-allocation.html">
+              <i class="fa fa-code"></i>DYNAMIC MEMORY ALLOCATION
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./file.html">
+              <i class="fa fa-code"></i>FILE I/O
+            </a>
+          </li>
+       
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="main-content">
+    <!-- Top navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="control.html">Scope Rules in C</a>
+         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAtuSURBVHhe7Z17UFTXHcc1zaTttJ3JdDqZNtPJH22nIJoqAQR8gG8XdgGR1y4PUcQnMU1MGtsai520jTYaIxDUqCg+IQrusru8ETPG9yMY0KpEG0WRGlADPhH49fxuD5bHYdl79yz3Avc785lh2N1zf7/vb/f+zjn3LgxRpUqVKlWqVKlSpaqztBEHPLQGU2nILOutkFmW2kC9MX+ift9w+rCqvlJgvOXnwbHmwzGLDkJs0qFORC882BagN5X4hGf/lD5dlbOkWXL5+7rovEz9gtLWroXoStT80paAyNxNERHwPfpyVTwVaDAti5hX/Ihlvi3CEgrvayJzFtNhVDkqrd4YPHN24W2W2WIIibfWTgs3aeiwqsQqNNY8IiTWeiFmcTnTYEmQsYJizV9qZuz9NT2Mqt4UEn/gxeCYvILoRQfbmKZygPSgNq0hzxicYPwJPayqrkpOhucCDKb1UfNLnrJMdAaRicXNAZGmfw4ZAkNpGKpQOr0xKTyx5D7LtL6ANP7vNPrcBBrO4JXGkOdPGnYNyyQ5mDEr/5vp4bm+NLzBI11cyStkdX0cmyzLGDnBxSYuOqckFL9Mwx24mhpb9COysMuNXljmtIbNC/2CstYAQ162f3z5D2j4A0kwVBtlej9qXskTVvJKJjKx5HFA1IEVNJH+ryC9xRCWUNTASrY/gTlow43hNK3+J11knldofH41KzleJC49DEl/PApLk48L4M/4O9ZzeTFjlvVfgdGWUTRN5Ss0Nucl0hQPsXZiHWHZ+ydhe/Zl+OJEHXz9TSM8ePgUehI+hs/B5+Jr3iWvZY0pFVy0Yo6YK01beYpIrnohKNqcYVhY1sJKQgrvrToNBWU1cPfeE2q1dN0hY+BYyz84zTyWFDBXnSFvk39y+fPUBmVIF5O3NHJeyUNW0GKJe/0QpGw5D/++3kSt5K+r1xrh481VwrFYMYglIrH4PnpA7ZBPZAobEDansI4VpBTWbKiEm7ceUNucrxu192F12lfMWKSAXqAn1J6+04w4y7CQeGslr53YN5Yfg1MV31Kb+l4nzt4WYmDFJhb0JCTOeg49onY5T7gBGBRjyeK5E/vRxkpout9MrZFPGAN+QlkxSgE9Coox73bqxmVInOUY6+BSwPO3peQ6tLVRRxQgjMVUeI1bbyFNH8YF7M2j9vEVXrljHVQKs9/4HI6c+g+1QXnC6XI8iZEVu71MmXkAvKdng0/APnD338H/SqXWYCxiHVgsWIyKqgaaunJ15qt6IVZWDrbQxVhIIfaCLylEOx4Td5ipjfxEpnWVrADEgKeCIyeV+8noKozV3tNX+JwiYn4W+Gr+X4hnBZm08xS1kZ9IQapYgYghr+gaTbX/yEh6CiuXdgwLymC8Dk9Nn3UrRDukIJXURn5ytCBryWxKSQ3cXmHMH6az1yrtfYJVhI54Tt5ZRW3kJ0cK8vv3jkHTg573npSuxqZmWPLno8/yYfUJWyiuIHIu+ngJF4+2+oQtFFUQXGw5Q/V3HgsmFZXfgCzjFQH8GX+Hj/HU4yctsG3vBRirZRveG4opCM5Qbtbx25vCbXVssrgLzDpeO3jcFavPCIs8W9v0vQn7R3H5dbwGwjTaXhRTENy15aGnT1vBWloDC//wBfM4tli07Ijw2qct4mYU5y82QOJbZUyDxaKYgvDYQsdrISvXnGWOLwYc415j79dV6hsewd/XnYKxgfuZ5kpBEQXBC0GOCrfHee3CIjjbwzFZau8Tk8hUlmWqIyiiIAUHa2iq0oSfDJ7FaAfHxGlsu3j1CVsooiCOXHZtbm6F5A8dP031BJ6+sKdcuHSHW5+whewFwRsSHBE2Yda4vJg5uwgS3yzh2idsIXtB8E4PqcJpqpTZlD3Ys+/kDGQvCF5PkCpcO7DGdAS8rDo5NMeufSdnIHtB8J4oqept0ScWrcEsat/JGcheEKmrY9zy4HX5NIz0CV8NKYTIfSdnIGtB8FZOqcJ9KNaYYtDPL4Vx2r7vE7aQtSBJfzpK7RWvwvIbzDHtQe4+YQtZC/L2yhPUXvHKNl1ljtkbgQroE7YYNAWJmFsMPtMyYbjvRvCasptphhIY8KcsXE/4B2XBMO9PwNUr9Rmvjt0E3tOU90kZuE2d9InpETkwwje9UyE6kwYjx28lp7AspjlyIGtBEGdMe0PirODut5lRADbDRqeR528DH438sy3ZC8JzYdjeJ1im24Obdzq8NnEHMUa+wshekMPHHd866alPSMXNZwMawzTM2cheEEc3FyMSzL30CemMGLMJRk/ZwzTOWcheEPxOnyPatvtLppk8WfGPwxA2J59pIG9kLwiC3+mTqubmFoias49pJA9i5u0XbpxoJuzJuQTTI01MI3mhiILgFywdUf2dhzBBu41pqCNM0G2DBjJ2R+GXdVI2nwO/4BymoY6iiILwuMmh+kqDYCDLWClMDNoujNmT6m4/gL+sPg5jAtnGSkURBUHw266Oqr7hARjm7mcaLAY8TeGnzh5drL4LScsOMc2VgmIKgl895iHsKZl7KsB3qv0Lw3bwNTuyKoSeIVZHTtRC9AK8n5dttL0opiC46q65yb4PSooaGx/Dp9tPQ/isbLISZxcAwcfwOZszz0Bjk2N/dKClpQ1MBVdBF2Nmmm0PyigI3Xda+JaFpsZXt+qawFJ4CdI+PQGr1h0WwJ+tRZdJL+D3JmjXQ7I+0hlyJG3FyF6QoFgLjOqw71RU9jVNq/8KC425/G8rJpMYbX9hZCtIeEIheE/pPivyD8yAu/ce0dT6n3CaPD4go1NOYrZi+rwgerzfSbsHXEendQq6IwveNPfbr7QlLjExc0JwK8Zrqu2tmD4rCF7Hnhq2D4bbue+0IeMUTbP/KH3LSWYuXfnduC3gPY19DcY5BYk2VXQsRtc+YQ84+8kruEhTVb5M+Rdtzua6Qc4Qo/wywKfLjRYek3dVUBv5SRN5wIyF6KlP2MurY9Kh7POrNGXlqqT8Cgz37vkUbAu8ZOA+YTv40hmZ+8TtRmojP/lN3unlp93daqtP2MsI30/AZFXuJyXXfAGG+zh+HUaYkU3KbHMfk+mcvwU8bHTKu6wDSwFPBRtJT1FSo29tbRN6hqjTVC+4eKa+Q+1zjlw9U/UuXqm1rINLAWdfSpgS49R27us9z6bEInhEvKK2OVdubmk/dvVM+Rs54ENWMGLxI+uUgtJqak3fK7/4crd1hmTQE+INekTt6ju5eXz8CglgFwmktVtgEsB3qK3tcd66VF0Pc5KMzFgk0IpeoCfUHvk0zHO9u6tXSjkjSNG4kZlN0jtWqLzgvL8adK6qTjgGv16RUo4eUDuUIxJcqItXSnX3gKURbNgDGbvOChuJjqr2ViNs2XFGGJN1LCnQXENp+sqUm1vyCyTQt0lTu9s1AUfQhO2Ev64qF6ak5yrr4LvGnv98Bj5WUXlLeO7KD8qF17LGlArmhjlirjRt5eu3Hpt+5uKZspYE/4SVFA9Gjd8AY6dtgakzMgXwZ/wd67k8wFwwJ8yNptn/5Oae9huSRC4rwf4E5oC50LT6v1w8UieQd9hZVrJKBmPG2GkaA03Jz7l4rk8g08MaVvKKgsSIsWLMNPiBq1/6rP0heectJ42xiWmGjGBMGBvGSMMdPHJ97aNfEBO2ErgsLB0EY9iKMdHwBq94LiylodCFndwi5uhcPFPPdzfMOdBj6ejhVbHk75/8vKtnymLyrv22q4H8IGOTY+Cx6GFV9aaRI9e9SGY6a3AxxjZVPMJYZEwcmx5GlVjhYoy8o/cT2lgm2we+NmX/gFrYyS3X0et9yDn/GNvwnhFeQ15Lh1HFVzDU1SPFQE4911jmd0R4Dnmu+p+g+0C2FpaDemEnt37lm/4S3niBG38I/oy/ow+rUqVKlSpVqlSpUiVoyJD/AvKVh+oW79O5AAAAAElFTkSuQmCC">
+        
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="header bg-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+         
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--10">
+     <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Scope in c</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+                <h3>Scope Rules in C</h3>
+   <p>A scope is a region of the program where a defined variable exists and that variable can be accessed from this region.</p>
+                <ul><li>Local Variables</li>
+                <li>Global Variables</li>
+                <li>Formal Variables</li></ul>
+          </div>
+           </div>
+          </div>
+        </div>   
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Local Variables</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+                <h3>Inside the block</h3>
+                <pre>
+<span class="g">#include&lt;stdio.h></span>  
+int main()
+{
+ int a,b,c;//<i>Local  variables</i>
+ a=54,b=45;//<i>Initialization</i>
+ c=a+b;     //<i>Access</i>
+ printf("%d",c);
+ }
+       </pre>
+                <h3>OUTPUT</h3>
+ <pre>99</pre> 
+              </div>
+           </div>
+          </div>
+        </div>
+         <!-- Page content -->
+      <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Global Variables</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+       <h3>Outside the block</h3>
+            <pre>
+<span class="g">#include &lt;stdio.h></span>
+int c;//Global Variables
+ int main()
+ <span class="r">{</span>
+  int a,b;//Local  variables
+  a=54,b=45;//Initialization
+  c=a+b;     //Access
+  printf("%d",c);
+ <span class="r">}</span> </pre> 
+                <h3>Output</h3>
+   <pre>99</pre>             
+     </div>
+          </div>
+           </div>
+          </div>
+ <div class="row mt-5">
+        <div class="col">
+          <div class="card bg-default shadow">
+            <div class="card-header bg-transparent border-0">
+              <h3 class="text-white mb-0">Formal Variables</h3>
+            </div>
+          </div>
+        </div>
+        </div>
+      <!-- Table -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header bg-transparent">
+       <h3>Called by function</h3>
+              
+              
+            <pre>
+<span class="g">#include&lt;stdio.h></span> 
+  int main()
+<span class="r">{</span>
+  int a,b;
+  a=54,b=45;
+  add(a,b);
+  printf("%d",add(a,b));
+ <span class="r">}</span>
+ int add(a,b)
+<span class="r">{</span>
+   int c;
+   c=a+b;
+   return c;
+<span class="r">}</span> </pre> 
+                <h3>Output</h3>
+                <pre>99 </pre>
+     </div>
+          </div>
+           </div>
+          </div>
+      </div>
+      
+
+
+         <!-- Page content -->
+        
+      <!-- Footer -->
+     <footer class="footer">
+        <div class="row align-items-center justify-content-xl-between">
+          <div class="col-xl-12">
+              <a href="advertise.htm"><img src="../assets/img/Picture1.png" style="max-width: 100%"></a>
+          </div>
+            
+         </div>
+      </footer>
+    </div>
+  
+  <!-- ocollege Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ocollege JS -->
+  <script src="../assets/js/ocollege.js?v=1.0.0"></script>
+</body>
+
+</html>
